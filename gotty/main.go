@@ -72,7 +72,7 @@ func main() {
 		}
 
 		args := c.Args().Slice()
-		factory, err := localcommand.NewFactory("kubectl", ["get", "nodes"], backendOptions)
+		factory, err := localcommand.NewFactory(args[0], args[1:], backendOptions)
 		if err != nil {
 			exit(err, 3)
 		}
