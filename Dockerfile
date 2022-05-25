@@ -8,7 +8,7 @@ WORKDIR /tmp
 COPY gotty gotty
 RUN apk add --update git make && \
   cd gotty && \
-  make gotty && cp gotty / && ls -l /gotty && /gotty -v
+  make gotty && cp gotty / && ls -l /gotty
 
 
 FROM alpine:3.15.4
