@@ -56,5 +56,5 @@ for env in ${envs[@]}; do
 done
 
 unset WELCOME_BANNER PPROF_ENABLED KUBECTL_INSECURE_SKIP_TLS_VERIFY SESSION_STORAGE_SIZE KUBECTL_VERSION
-
-exec kubectl exec --stdin --tty cluster1 -n cluster-test -- /bin/bash
+exec su -s /bin/bash nobody
+#exec kubectl exec --stdin --tty cluster1 -n cluster-test -- /bin/bash
